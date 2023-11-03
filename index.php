@@ -6,11 +6,11 @@
 // should be "/comem-archidep-php-todo-exercise/". If you are accessing the
 // application at "http://localhost:8888", then BASE_URL should be "/".
 
-define('BASE_URL', dynamicURL());
+define('BASE_URL', getenv('TODOLIST_BASE_URL') ?: '/');
 
 // Database connection parameters.
 define('DB_USER', 'root');
-define('DB_PASS', 'root');
+define('DB_PASS', getenv('TODOLIST_DB_PASS'));
 define('DB_NAME', 'todolist');
 define('DB_HOST', 'localhost');
 define('DB_PORT', '3306');
